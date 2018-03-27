@@ -1,0 +1,97 @@
+#RCForm
+    border: solid 1px #efefef;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px #bdbdbb;
+    h2
+        margin: -21px -21px 0 !important;
+        padding: 20px 15px;
+        text-align: left;
+        font-size: 28px;
+        position: relative
+        color: #444444;
+        &:after
+            content: ""
+            width: 85%
+            position: absolute
+            bottom: 10px;
+            height: 3px
+            background: linear-gradient(to right, #444444, #fff) ;
+            left: 16px;
+    label
+        position: relative;
+        text-align: left;
+        margin: 0;
+        margin-top: 10px;
+        height: auto;
+        font-size: 18px;
+        span 
+            font-size: 1em;
+            font-weight: normal;
+            color: #444444
+            padding: 0;
+        &.animate
+            span 
+                position: absolute;
+                bottom: 0px;
+                left: 15px;
+                transition: all 0.3s ease-out;                            
+                &.label-seprate
+                    bottom: 1.3em;
+                    left: 0;
+                    font-size: 0.8em;
+        input:not([type='radio']):not([type='checkbox'])
+            height: 1em;
+            font-size: inherit;
+            border: 0;
+            box-shadow: none;
+            outline: 0;
+            border-bottom: 1px solid;
+            border-radius: 0;
+            font-weight: normal;
+            margin-top: 1em;
+            padding: 6px 15px;
+            &.error_input
+                border: solid 1.5px #ff5252;
+                border-radius: 5px;
+        input[type='radio'],
+        input[type='checkbox']
+            float: left;
+            margin-right: 5px;
+            margin-top: 1.5px;
+            zoom: 1.3;
+        i 
+            position: absolute
+            right: 0px;
+            top: 50%
+            transform: translateX(-50%);
+            cursor: pointer
+    input[type=button], 
+    input[type=reset], 
+    input[type=submit],
+    button.submit
+        display: inherit;
+        margin: 16px auto 0;
+        display: inherit;
+        border-radius: 0;
+        box-shadow: none;
+        background: #067b98;
+        border: #067b98;
+        outline: #067b98;
+        color: #fff;
+        padding: 12px 15%;
+
+.example-body
+	width: 100%
+	.rc-form-container
+		position: relative;
+		height 90vh
+		.user-form
+			width: 45%
+			max-width: 550px;
+			position: absolute;
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			label input:not([type='radio']):not([type='checkbox'])
+				width: 93%;
