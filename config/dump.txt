@@ -59,3 +59,83 @@ class Input extends Component {
 }
 
 export default Input;
+
+
+
+
+
+ //to be added in next update
+    
+    // getChild(){
+    //     if(this.props.children)
+    //         return this.props.children;
+        
+    //     const {
+    //         heading,
+    //         childInput,
+    //         inputClassName,
+    //         submitClassName,
+    //         submitValue,
+    //         validateOnBlur
+    //     } = this.props;
+
+    //     let content =   <div className="form-container">
+    //                         <h2>
+    //                             {heading}
+    //                         </h2>
+    //                         <div className="row">
+    //                             {
+    //                                 childInput.map((el, i) => {
+    //                                     return Array.isArray(el) ? 
+    //                                                 el.map((kel, ki) => this.getInput(kel, ki)) : 
+    //                                                     this.getInput(el, i)
+    //                                 })
+    //                             }
+    //                         </div>
+    //                         <input 
+    //                             type="submit" 
+    //                             value={submitValue || "Submit"} 
+    //                             className={submitClassName || "submit-btn"}
+    //                         />
+    //                     </div>
+        
+    //     return content;
+    // }
+
+    // getInput(el, i){
+    //     if(inputClassName){
+    //         el.className = inputClassName;
+    //     }
+    //     if(validateOnBlur){
+    //         el.validateOnBlur = validateOnBlur
+    //     }
+
+    //     return <Input {...el} key={Math.random()+i} />
+    // }
+
+
+#RCForm {
+    border: solid 1px #efefef;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px #bdbdbb;
+}
+
+#RCForm h2 {
+    margin: -21px -21px 0;
+    padding: 20px 15px;
+    text-align: left;
+    font-size: 28px;
+    position: relative;
+    color: #444;
+}
+
+#RCForm h2:after {
+    content: "";
+    width: 85%;
+    position: absolute;
+    bottom: 10px;
+    height: 3px;
+    background: linear-gradient(to right, #444, #fff);
+    left: 16px;
+}
