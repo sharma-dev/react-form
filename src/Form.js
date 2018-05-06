@@ -27,12 +27,13 @@ class RCForm extends Component {
             event.preventDefault();
         }
 
-        if(!this.props.shouldValiate || this.props.shouldValiate != false){
+        if(!this.props.shouldValidate || this.props.shouldValidate != false){
             const elements = event.target.elements;
             for(let i = 0; i < elements.length; i++){
                 let validation = elements[i].dataset.validation;
                 let v = validate(elements[i].value, validation);                
                 if(!v.status){
+                    event.preventDefault();
                     elements[i].focus();
                     elements[i].blur();
                     return false;
